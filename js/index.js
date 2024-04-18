@@ -39,7 +39,7 @@ export function myFunc(plussAbleNumber) {
 // putt inn riktig info med bruk av nina objectet. og send ut infoen (se oppgave 2)
 export function oppgave3() {
     let val = `${NaN} kan kode, og er ${NaN} år.`
-   
+    return val
 }
 
 //OPPGAVE FIRE 
