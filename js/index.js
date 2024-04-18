@@ -20,12 +20,13 @@ export const litteralString = `kaldt inne i ${array[1]}en`
 // denne for loopen står feil endre den så han funker
 //NB HUSK OG UNCOMMENT
 export function myFunc(plussAbleNumber) {
-    // for ( i = 0; i < ; i {
-    //    plussAbleNumber++
-    //};
+    for (let i = 0; i < number; i++) {
+        plussAbleNumber++
+    };
     return plussAbleNumber
 }
 
+myFunc(1)
 
 // OPPGAVE TRE
 // putt inn riktig info med bruk av nina objectet. og send ut infoen (se oppgave 2)
