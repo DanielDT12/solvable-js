@@ -19,14 +19,21 @@ export const litteralString = `kaldt inne i ${array[1]}en`
 // OPPGAVE TO
 // denne for loopen står feil endre den så han funker
 //NB HUSK OG UNCOMMENT
+
+// Comment fra Daniel: Brukte ordiærnt bare (let i = 0; i < 10; i++)
+// 10 som random tall men da printet den ikke ut løsnings diven, så måtte endre den
+// til spesifikt 23 eller "number" variablen som er laget i oppgave 1,
+// jeg gikk derfor inn i siteLogic å sjekket hvordan den funktet, fordi jeg kunne ikke se noe
+// feil med min første løsning. I siteLogic så fant jeg en if statement som sjekker om parameteret
+// i myFunc er lik 23 for å printe ut løsningen på siden, men siden jeg i utgangs punktet hadde satt
+// i < 10; så fikk jeg ikke opp løsnings diven på siden selvom den funket å printet 10 i consolen.
 export function myFunc(plussAbleNumber) {
     for (let i = 0; i < number; i++) {
         plussAbleNumber++
     };
+    console.log(plussAbleNumber)
     return plussAbleNumber
 }
-
-myFunc(1)
 
 // OPPGAVE TRE
 // putt inn riktig info med bruk av nina objectet. og send ut infoen (se oppgave 2)
