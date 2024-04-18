@@ -8,12 +8,12 @@
 // navn: "Nina", alder: 42, 
 // true
 // `kaldt inne i ${array[1]}en`
-export const string = NaN 
-export const number = NaN
-export const array = NaN
-export const object = NaN
-export const boolean = NaN
-export const litteralString = NaN 
+export const string = "per knut"; 
+export const number = 23;
+export const array = ["skog", "vann", "mark"];
+export const object = {navn: "Nina", alder: 42};
+export const boolean = true;
+export const litteralString = `kaldt inne i ${array[1]}en` 
 
 
 // OPPGAVE TO
