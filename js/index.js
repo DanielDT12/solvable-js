@@ -20,13 +20,16 @@ export const litteralString = `kaldt inne i ${array[1]}en`
 // denne for loopen står feil endre den så han funker
 //NB HUSK OG UNCOMMENT
 
-// Comment fra Daniel: Brukte ordiærnt bare (let i = 0; i < 10; i++)
-// 10 som random tall men da printet den ikke ut løsnings diven, så måtte endre den
-// til spesifikt 23 eller "number" variablen som er laget i oppgave 1,
-// jeg gikk derfor inn i siteLogic å sjekket hvordan den funktet, fordi jeg kunne ikke se noe
-// feil med min første løsning. I siteLogic så fant jeg en if statement som sjekker om parameteret
-// i myFunc er lik 23 for å printe ut løsningen på siden, men siden jeg i utgangs punktet hadde satt
-// i < 10; så fikk jeg ikke opp løsnings diven på siden selvom den funket å printet 10 i consolen.
+/* Comment fra Daniel:
+    Brukte ordiærnt bare (let i = 0; i < 10; i++)
+    10 som random tall men da printet den ikke ut løsnings diven,
+    så måtte endre den til spesifikt 23 eller "number" variablen som er laget i oppgave 1,
+    jeg gikk derfor inn i siteLogic å sjekket hvordan den funktet, fordi jeg kunne
+    ikke se noe feil med min første løsning. I siteLogic så fant jeg en if statement
+    som sjekker om parameteret i myFunc er lik 23 for å printe ut løsningen på siden, men 
+    siden jeg i utgangs punktet hadde satt i < 10; så fikk jeg ikke opp løsnings
+    diven på siden selvom den funket å printet 10 i consolen.
+*/
 export function myFunc(plussAbleNumber) {
     for (let i = 0; i < number; i++) {
         plussAbleNumber++
@@ -37,7 +40,15 @@ export function myFunc(plussAbleNumber) {
 
 // OPPGAVE TRE
 // putt inn riktig info med bruk av nina objectet. og send ut infoen (se oppgave 2)
+
+/* Comment fra Daniel:
+    Det som skjer hær er at objValue henter ut values fra object å putter det
+    i ett array ( objValue = ["Nina", 42] ), etter det putter jeg array indexen til 
+    objValue inn i template literalen som da returnerer ${objValue[0]} = "Nina"
+    ${objValue[1]} = 42.
+*/
 const objValue = Object.values(object);
+console.log(objValue);
 
 export function oppgave3() {
     let val = `${objValue[0]} kan kode, og er ${objValue[1]} år.`
@@ -46,11 +57,21 @@ export function oppgave3() {
 
 //OPPGAVE FIRE 
 // ta og fjern den som ikke matcher med arrayet og reassign fulført array så den har riktig ting i seg
+
+/* Comment fra Daniel:
+    I denne opppgaven bruker jeg .splice() methoden til å skjære ut en del av arrayet
+    jeg setter splice = arr1.splice(arrayIndexStart, hvorMangeTingSomSkalFjernes).
+    Jeg setter start til 2 som gjør at den starter på "stål" deretter 1 som gjør at den fjerner
+    ett element fra arrayet fra array posisjon 2 som er "stål". Etter det reasigner jeg 
+    fullførtArray = arr1 som gjør at arr1 som er ferdig kuttet blir til fullførtArray.
+*/
 export function oppgave4() {
     let fullførtArray = []
     let arr1 = ["suppe", "tomat", "stål", "leverpostei"]
-
-
+    let splice = arr1.splice(2, 1);
+        fullførtArray = arr1;
+        console.log(splice);
+        console.log(fullførtArray);
     return fullførtArray
 }
 
