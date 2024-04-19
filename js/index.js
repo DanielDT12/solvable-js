@@ -103,7 +103,10 @@ export function oppgave5() {
     Hvis bool ikke er true i if statement så går den vidre til else å gjør bool = !bool 
     før den returnerer bool. Er litt usikker på om man burde returne inne i else statement
     eller returne under selve funksjonen. Vet heller ikke helt hvorfor den dobbel logger samme
-    statement i consol loggen.
+    statement i consol loggen. Brukte consol log til å sjekke om den returnerer den koden som
+    er i de forskjellige blokkene, hvis man endrer let bool = false til true så logger den if
+    statementen til consolen, hvis den er false så går den vidre å logger else statementen til
+    consolen.
 */
 export function oppgave6() {
     let bool = false
@@ -119,11 +122,30 @@ export function oppgave6() {
 
 //OPPGAVE syv 
 // lag et div element som blir sendt inn. for og lage deres egen oppgave fulført
+
+/* Comment fra Daniel:
+    document.createElement("div") setter at div variabelen som er laget, lager en div i dokumentet.
+    document.createElement("p") gjør det samme bare med en p tag istedet.
+    document.createTextNode("den teksten som skal være inne i en annen tag") denne lagrer tekst
+    som kan puttes inne i en annen tag, i dette tilfellet en p tag.
+    div.appenChild(p) putter p taggen inne i diven som er laget.
+    p.append(text) legger teksten inne i p taggen.
+    div.classList.add("class") denne legger til en class til enten eksisterende liste eller lager 
+    en ny class med det som er gitt i parameteret. Return avslutter funksjonen å gir tilbake
+    den ferdige diven med alt som er inne i den. Går utifra at siden jeg ikke trengte å appende 
+    diven til page containeren, så er det noe i site logic som gjør det for meg. Hvis ikke det var
+    det kunne man gjort "minContainer.appendChild("div")" å lagt den til i funksjonen. Den må først 
+    lagres inne i javascript som en variabel som
+    for eksempel "minContainer = document.querySelector("#min-container")". 
+*/
 export function oppgave7() {
-// div (med class "box-style")
-// p
-// text = godt jobbet :3 oppgave 1 løst
-return div
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+    let text = document.createTextNode("godt jobbet :3 oppgave 7 løst")
+        div.appendChild(p)
+        p.append(text)
+        div.classList.add("box-style")
+    return div
 }
 
 //oppgave 8
