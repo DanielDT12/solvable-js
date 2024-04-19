@@ -77,12 +77,19 @@ export function oppgave4() {
 
 //OPPGAVE FEM
 // endre floating til 640 med matte (*, /, +, -). prøv og gjøre den så intrisang som mulig
+
+/* Comment fra Daniel:
+    Prøvde å gjøre den så kul som mulig, men e kanskje ikke så veldig komplisert.
+
+*/
 export function oppgave5() {
     const static1 = 4 
     const static2 = 20 
     const static3 = 10
-    let floating = NaN
-    console.log(static1,static2,static3) // fjern denne når dere kommer så langt
+    let twoHundred = static2 * static3;
+    let forty = static2 * 2;
+    let floating = (twoHundred * static1) - twoHundred + forty;
+    console.log(floating) // fjern denne når dere kommer så langt
 
     return floating
 }
