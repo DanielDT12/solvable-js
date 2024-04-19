@@ -80,7 +80,6 @@ export function oppgave4() {
 
 /* Comment fra Daniel:
     Prøvde å gjøre den så kul som mulig, men e kanskje ikke så veldig komplisert.
-
 */
 export function oppgave5() {
     const static1 = 4 
@@ -94,12 +93,29 @@ export function oppgave5() {
     return floating
 }
 //OPPGAVE SEKS
-// lag en if else statment som vil sjekke om bool er true eller false. om den er true return bool. om den e false gjør bool true
+// lag en if else statment som vil sjekke om bool er true eller false.
+// om den er true return bool.
+// om den e false gjør bool true
+
+/* Comment fra Daniel:
+    else statement gjør bool = !bool som setter bool til true hvis den er false eller
+    omvendt, siden if statement returner bool og går ut av statementen hvis bool er true. 
+    Hvis bool ikke er true i if statement så går den vidre til else å gjør bool = !bool 
+    før den returnerer bool. Er litt usikker på om man burde returne inne i else statement
+    eller returne under selve funksjonen. Vet heller ikke helt hvorfor den dobbel logger samme
+    statement i consol loggen.
+*/
 export function oppgave6() {
     let bool = false
+    if(bool) {
+        console.log(`If statement log ${bool}`)
+        return bool
+    } else {
+        bool = !bool;
+        console.log(`Else statement log ${bool}`)
+    };
     return bool
-    bool = !bool
-}
+};
 
 //OPPGAVE syv 
 // lag et div element som blir sendt inn. for og lage deres egen oppgave fulført
