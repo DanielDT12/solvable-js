@@ -37,8 +37,10 @@ export function myFunc(plussAbleNumber) {
 
 // OPPGAVE TRE
 // putt inn riktig info med bruk av nina objectet. og send ut infoen (se oppgave 2)
+const objValue = Object.values(object);
+
 export function oppgave3() {
-    let val = `${NaN} kan kode, og er ${NaN} år.`
+    let val = `${objValue[0]} kan kode, og er ${objValue[1]} år.`
     return val
 }
 
