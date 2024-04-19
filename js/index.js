@@ -182,7 +182,7 @@ console.log(randomArray); // Console logger det randomet arrayet.
 function bubbleSort(numbers) {
     for(let i = 0; i < numbers.length; i++) { // Denne loopen velger hvor mange gang arrayet, skall sorteres
         for(let j = 0; j < numbers.length - (i + 1); j++) { // Denne loopen velger hvordan ting skal sorteres
-            const left = numbers[j]; // Dette setter "venstre siden" til "mitt array"[j] hvor j er hvor langt i loopen den har kommet
+            const left = numbers[j]; // Dette setter "venstre siden" til "mitt array"[j] hvor j er hvor langt i loopen/arrayet den har kommet
             const right = numbers[j + 1]; // Dette gjør det samme som den over bare at det er 1 posisjon over i arrayet
             if(left > right) { // Når man kommer hit sjekker den om det tallet som er på "venstre siden" er størret en "høyre siden"
                 numbers[j] = right; // Hvis tallet er høyere bytter de plass slik at tallet på venstre siden går 1 plass opp i arrayet
