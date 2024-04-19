@@ -150,6 +150,54 @@ export function oppgave7() {
 
 //oppgave 8
 //ta og vis dere fram med noe kode
-function showoff() {
-    
+
+
+/* Comment fra Daniel:
+    randomNumberArray printer ut et array med random tall, du kan definere lengde på arrayet,
+    det minste og største tallet som skal være med i arrayet for eksempel: et array med lengde på 
+    50 tall, som inneholder tall mellom 1 og 100. Detter er satt opp som en arrow function
+    så (length, min, max) blir parameter for funksjonen som er definert foreløpig som 
+    randomNumberArray(50, 1, 100); dette lager et array med tall i random rekefølge og inneholder
+    50 tall og tall mellom 1 og 100. Etter funksjone er kjørt logger den random arrayet i consolen.
+*/
+const randomNumberArray = (length, min, max) => { // initialiserer arrow funksjonen med parameter
+    const numberArray = []; // lager et tomt array for å putte inn tallene
+    for(let i = 0; i < length; i++) { // starter en for loop som printer ut random tall med funksjon parameter som loop lengden
+        numberArray.push(Math.floor(Math.random() * (max - min + 1) + min)); // genererer randome hell tall med max og min parametre fra funksjonen, så man kan velge hvilken tall rekke som skal inkluderes, f.eks min = 10 max = 200, da får man en tall rekke mellom 20 og 200. så putter den alle tallene inne i et array.
+    }
+    return numberArray; // denne returnerer det ferdige arrayet med de randome tallene.
 }
+
+const randomArray = randomNumberArray(50, 1, 100); // setter bare funksjonen til en egen variabel for å bruke i sorting algoritmen. Du kan bytte parameter selv
+
+console.log(randomArray); // Console logger det randomet arrayet.
+
+
+/* Comment fra Daniel:
+    Dette er en sorterings algoritme kalt bubble sort. Jeg bruker det samme arrayet som er laget
+    med den forige funksjonen til å kjøre igjennom denne sorterings algoritmen. funksjonen har et
+    parameter som heter numbers som jeg da kan sette in hvilket som helts number array, i dette
+    tilfellet bruker jeg randomArray fra den forige funksjonen.
+*/
+function bubbleSort(numbers) {
+    for(let i = 0; i < numbers.length; i++) { // Denne loopen velger hvor mange gang arrayet, skall sorteres
+        for(let j = 0; j < numbers.length - (i + 1); j++) { // Denne loopen velger hvordan ting skal sorteres
+            const left = numbers[j]; // Dette setter "venstre siden" til "mitt array"[j] hvor j er hvor langt i loopen den har kommet
+            const right = numbers[j + 1]; // Dette gjør det samme som den over bare at det er 1 posisjon over i arrayet
+            if(left > right) { // Når man kommer hit sjekker den om det tallet som er på "venstre siden" er størret en "høyre siden"
+                numbers[j] = right; // Hvis tallet er høyere bytter de plass slik at tallet på venstre siden går 1 plass opp i arrayet
+                numbers[j + 1] = left;
+            };
+        };
+    };
+    return numbers // når loopen har kjørt igjennom hele arrayet returnerer den det ferdig sorterte arrayet
+};
+
+console.log(bubbleSort(randomArray)) // Så printer jeg ut det ferdig sorterte arrayet.
+
+/* Comment fra Daniel:
+    tok en sorterings algoritme fordi jeg syntes det var litt kult at jeg kan generere et random
+    array å så sortere det arrayet rett etter på og når man da console logger begge to kan
+    man se at hver gang man refresher pagen så kommer det ut et random array og det samme arrayet
+    ferdig sortert rett under.
+*/
