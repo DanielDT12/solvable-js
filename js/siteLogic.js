@@ -5,6 +5,7 @@
 const pageEl = {
     headerT: document.querySelector("#top-box"),
     maincont: document.querySelector("#main-cont"),
+    oppgave8div: document.querySelector("#oppgave-8")
 }
 
 let oppg1 = false
