@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: rgb(210, 210, 210);
     text-align: center;
+    font-family: system-ui, sans-serif;
 }
 header {
     background-color: rgb(224, 224, 92);
@@ -20,6 +21,13 @@ header > h1 {
     margin:  0;
     font-size: 62px;
 }
+
+p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+}
+
 #main-cont {
     width: 100%;
     padding: 65px;
